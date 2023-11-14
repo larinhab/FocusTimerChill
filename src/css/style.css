@@ -7,10 +7,22 @@
 
 html, body, #page {
     height: 100vh;
+    overflow: hidden;
 }
 
 :root {
     font-size: 62,5%;
+}
+
+video {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 #page {
@@ -28,14 +40,22 @@ html, body, #page {
     flex-direction: column;
 
     margin-right: 10rem;
-    
+    padding: 1rem;
+  
+    background-color: #ffffff;
+    opacity: .8;
+    box-shadow: 10px 10px 51px 0px  rgba(255,255,255,0.75);
+    border-radius: 5px;
+    backdrop-filter: blur(40px);
+    -webkit-box-shadow: 10px 10px 51px 0px;
+    -moz-box-shadow: 10px 10px 51px 0px;
 }
 
 .timer-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #323238;
+    color: black;
     text-align: center;
     font-family: Roboto;
     font-size: 126px;
@@ -47,7 +67,7 @@ html, body, #page {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     gap: 40px;
 }
 
@@ -58,7 +78,7 @@ html, body, #page {
     border: none;
     cursor: pointer;
 
-    color: #323238;
+    color: black;
     font-size: 4rem;
 }
 
@@ -93,15 +113,12 @@ html, body, #page {
     background-color: #858585;
 }
 
+#stop {
+    display: none;
+}
 
 /*-----------------------------THEMES------------------------------- */
 
-.video {
-    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .selected {
     background-color: hsla(194, 97%, 31%, 1);
@@ -114,17 +131,17 @@ html, body, #page {
 
 .nature .timer-wrapper,
 .nature .controls-wrapper button {
-    color: rgb(223, 223, 223);
-    
+    color: black;
+   /* color: rgb(223, 223, 223); */
 }
 
 .nature .timer-wrapper button:hover,
 .nature .controls-wrapper button:hover {
-    color: #747474;
+    color: #325c1f;
 }
 
 .nature .weather-wrapper button:hover {
-    color: #1d3611;
+    color: #325c1f;
 }
 
 .rain {
@@ -134,17 +151,17 @@ html, body, #page {
 
 .rain .timer-wrapper,
 .rain .controls-wrapper button {
-    color: rgb(223, 223, 223);
+    color: black;
     
 }
 
 .rain .timer-wrapper button:hover,
 .rain .controls-wrapper button:hover {
-    color: #747474;
+    color: #0f175c;
 }
 
 .rain .weather-wrapper button:hover {
-    color:#060b31;
+    color:#0f175c;
 }
 
 
@@ -155,13 +172,13 @@ html, body, #page {
 
 .coffee .timer-wrapper,
 .coffee .controls-wrapper button {
-    color: rgb(223, 223, 223);
+    color: black;
     
 }
 
 .coffee .timer-wrapper button:hover,
 .coffee .controls-wrapper button:hover {
-    color: #747474;
+    color: #2b1c1c;
 }
 
 .coffee .weather-wrapper button:hover {
@@ -175,13 +192,13 @@ html, body, #page {
 
 .fire .timer-wrapper,
 .fire .controls-wrapper button {
-    color: rgb(223, 223, 223);
+    color: black;
     
 }
 
 .fire .timer-wrapper button:hover,
 .fire .controls-wrapper button:hover {
-    color: #747474;
+    color: #410404;
 }
 
 .fire .weather-wrapper button:hover {

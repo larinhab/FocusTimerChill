@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" class="default music-on ">
+<html lang="en" class="default  ">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./src/css/style.css" class="css">
+    <link rel="shortcut icon" href="./src/assets/favicon-32x32.png" type="image/x-png">
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <title>Focus timer</title>
+    <title>Time to Focus</title>
 </head>
 <body>
     <audio loop id="audio" src="" ></audio>
-    <video autoplay loop muted id="video" src=""></video>
+    <video autoplay loop muted id="video" src="./src/videos/default.mp4"></video>
     
     <div id="page">
     <div class="left">
         <div class="timer-wrapper flex" id="timer">
-            <span id="minutes"></span>
+            <span id="minutes">00</span>
             <span id="">:</span>
-            <span id="seconds"></span>
+            <span id="seconds">00</span>
         </div>
 
         <div class="controls-wrapper flex" id="controls">
@@ -59,15 +60,25 @@
                 <ion-icon name="remove-circle-outline"></ion-icon>
                 <span class="sr-only">Less minus</span>
             </button>
-
+            
+            <div class="controls-wrapper" id="controls">
             <button 
                 class="btn" 
                 id="music"
-                data-action="set">
+                data-action="toggleMusic">
 
-                <ion-icon name="musical-notes-outline"></ion-icon>
+                <ion-icon name="volume-high-outline"></ion-icon>
                 <span class="sr-only">Play Music</span>
             </button>
+            <button 
+                class="btn" 
+                id="stop"
+                data-action="toggleMusic">
+
+                <ion-icon name="volume-mute-outline"></ion-icon>
+                <span class="sr-only">Pause Music</span>
+            </button>
+        </div>
         </div>
     </div>
     
@@ -80,13 +91,13 @@
             </div>
             <div id="rain">
                 <button id="rain " class="card">
-                    <ion-icon name="rainy-outline"></ion-icon>
+                    <ion-icon name="thunderstorm-outline"></ion-icon>    
                 </button>
                 <span class="sr-only">Active video rain</span>
             </div>
             <div id="coffee">
                 <button id="coffee" class="card">
-                    <ion-icon name="home-outline"></ion-icon>
+                    <ion-icon name="storefront-outline"></ion-icon>
                 </button></span>
                 <span class="sr-only">Active video Coffee Shop</span>
             </div>
@@ -97,13 +108,7 @@
                 <span class="sr-only">Active mode Fireplace</span>
             </div>
         </div>
-        <div></div>
     </div> 
-
-
-
-
-
 
     <script src="./src/js/main.js" defer type="module"></script>
 </body>

@@ -1,39 +1,55 @@
 import * as state from './state.js'
 
-//export const video = document.getElementById('video')
-export const audios = document.getElementById('audio')
-export const cards = document.getElementsByClassName('card')
+export const videos = document.getElementById('video')
+export const cards = document.querySelectorAll('.card')
 export const musicBtn = document.getElementById('music')
+export const stopBtn = document.getElementById('stop')
+const html = document.documentElement;
 
-//export const natureVideo = new video('./src/video/florest.mp4')
-//export const rainVideo = new video('./src/videos/rain.mp4')
-//export const coffeeVideo = new video('./src/videos/coffeeshop.mp4')
-//export const fireVideo = new video('./src/videos/fireplace.mp4')
-//export const defaultvideoVideo = new video('./src/videos/bg-audio.mp4')   
+//export const natureVideo = new Video('./src/video/florest.mp4')
+//export const rainVideo = new Video('./src/videos/rain.mp4')
+//export const coffeeVideo = new Video('./src/videos/coffeeshop.mp4')
+//export const fireVideo = new Video('./src/videos/fireplace.mp4')
+//export const defaultvideoVideo = new Video('./src/videos/bg-audio.mp4')   
 
+export const audio = {
+    nature: new Audio('./src/audio/florest.wav'),
+    rain:  new Audio('./src/audio/raint.wav'),
+    coffee: new Audio('./src/audio/coffeeshop.wav'),
+    fire: new Audio('./src/audio/fireplace.wav'),
+    defaultAudio: new Audio('./src/audio/default.wav')
+}
 
-export const natureAudio = new Audio('./src/audio/florest.wav')
-export const rainAudio = new Audio('./src/audio/rain.wav')
-export const coffeeAudio = new Audio('./src/audio/coffeeshop.wav')
-export const fireAudio = new Audio('./src/audio/fireplace.wav')
-export const defaultAudio = new Audio('./src/audio/bg-audio.mp3')
-
-
-//video.setAttribute('src', natureVideo)
 
 // MUSIC -----------------------------------------------
 
 export function toggleMusic() {
+    let isPlaying = false
+    
     musicBtn.addEventListener('click', (e) => {
-        state.isMute = document.documentElement.classList.toggle('music-on')
-        if(state.isMute) {
-            defaultAudio.play()
-            return
+        if(isPlaying){
+            audio.defaultAudio.pause() 
+            musicBtn.style.display = 'none'
+            stopBtn.style.display = 'block'
         }else{
-            defaultAudio.pause()
+            audio.defaultAudio.play()
         }
-        console.log('on')
+        isPlaying = !isPlaying
     })
-}
+    
+     stopBtn.addEventListener('click', (e) => {
+        if(isPlaying){
+            audio.defaultAudio.pause()
+            musicBtn.style.display = 'block'
+            stopBtn.style.display = 'none'
+
+        }else{
+            audio.defaultAudio.play()
+            musicBtn.style.display = 'none'
+            stopBtn.style.display = 'block'
+        }
+        isPlaying = !isPlaying
+     })
+};
 
 toggleMusic()

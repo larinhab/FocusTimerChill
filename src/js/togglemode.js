@@ -34,9 +34,22 @@ natureToggle.addEventListener('click', (event) => {
    
     resetModeActive()
     const mode = defaultMode ? 'nature' : 'dark'
-    
-})
 
+    if(document.documentElement.classList.contains('nature')){
+        multimedia.audio.defaultAudio.pause()
+        multimedia.audio.nature.play()
+        multimedia.audio.rain.pause()
+        multimedia.videos.setAttribute('src', `./src/videos/nature.mp4`)
+    }else {
+        multimedia.audio.nature.pause()
+        multimedia.audio.fire.pause()
+        multimedia.audio.rain.pause()
+        multimedia.audio.coffee.pause()
+        multimedia.audio.defaultAudio.play()
+
+        multimedia.videos.setAttribute('src', `./src/videos/default.mp4`)
+    }
+})  
 
 
 rainToggle.addEventListener('click', (event) => {
@@ -46,6 +59,22 @@ rainToggle.addEventListener('click', (event) => {
     resetModeActive()
     //rainMode = !rainMode
     const mode = defaultMode ? 'rain' : 'dark'
+    if(document.documentElement.classList.contains('rain')){
+        multimedia.audio.defaultAudio.pause()
+        multimedia.audio.rain.play()
+        multimedia.audio.nature.pause()
+        multimedia.audio.fire.pause()
+        multimedia.audio.coffee.pause()
+        multimedia.videos.setAttribute('src', `./src/videos/rainn.mp4`)
+    }else {
+        multimedia.audio.rain.pause()
+        multimedia.audio.fire.pause()
+        multimedia.audio.nature.pause()
+        multimedia.audio.coffee.pause()
+        multimedia.audio.defaultAudio.play()
+
+        multimedia.videos.setAttribute('src', `./src/videos/default.mp4`)
+    }
 })
 
 coffeeToggle.addEventListener('click', (event) => {
@@ -55,6 +84,22 @@ coffeeToggle.addEventListener('click', (event) => {
 
     //coffeeMode = !coffeeMode
     const mode = defaultMode ? 'coffee' : 'dark'
+    if(document.documentElement.classList.contains('coffee')){
+        multimedia.audio.defaultAudio.pause()
+        multimedia.audio.nature.pause()
+        multimedia.audio.rain.pause()
+        multimedia.audio.coffee.play()
+
+        multimedia.videos.setAttribute('src', `./src/videos/coffeee.mp4`)
+    }else {
+        multimedia.audio.coffee.pause()
+        multimedia.audio.fire.pause()
+        multimedia.audio.nature.pause()
+        multimedia.audio.rain.pause()
+        multimedia.audio.defaultAudio.play()
+
+        multimedia.videos.setAttribute('src', `./src/videos/default.mp4`)
+    }
 })
 
 fireToggle.addEventListener('click', (event) => {
@@ -63,5 +108,22 @@ fireToggle.addEventListener('click', (event) => {
     resetModeActive()
     //fireMode = !fireMode   
     const mode = defaultMode ? 'fire' : 'dark'
+
+    if(document.documentElement.classList.contains('fire')){
+        multimedia.audio.defaultAudio.pause()
+        multimedia.audio.nature.pause()
+        multimedia.audio.rain.pause()
+        multimedia.audio.coffee.pause()
+        multimedia.audio.fire.play()
+        multimedia.videos.setAttribute('src', `./src/videos/fireplace.mp4`)
+    }else {
+        multimedia.audio.fire.pause()
+        multimedia.audio.nature.pause()
+        multimedia.audio.rain.pause()
+        multimedia.audio.coffee.pause()
+        multimedia.audio.defaultAudio.play()
+
+        multimedia.videos.setAttribute('src', `./src/videos/default.mp4`)
+    }
 })
 
