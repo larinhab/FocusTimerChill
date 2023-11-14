@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="default music-on ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./src/css/style.css" class="css">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <title>Focus timer</title>
+</head>
+<body>
+    <audio loop id="audio" src="" ></audio>
+    <video autoplay loop muted id="video" src=""></video>
+    
+    <div id="page">
+    <div class="left">
+        <div class="timer-wrapper flex" id="timer">
+            <span id="minutes"></span>
+            <span id="">:</span>
+            <span id="seconds"></span>
+        </div>
+
+        <div class="controls-wrapper flex" id="controls">
+            <button 
+                class="btn" 
+                id="play"
+                data-action="toggleRunning">
+
+                <ion-icon name="play-circle-outline"></ion-icon>
+                <span class="sr-only">Start</span>
+            </button>
+
+            <button 
+                class="btn" 
+                id="pause"
+                data-action="toggleRunning">
+
+                <ion-icon name="pause-circle-outline"></ion-icon>
+                <span class="sr-only">Pause</span>
+            </button>
+
+            <button 
+                class="btn" 
+                id="plus"
+                data-action="set">
+
+                <ion-icon name="add-circle-outline"></ion-icon>
+                <span class="sr-only">More minus</span>
+            </button>
+
+            <button 
+                class="btn" 
+                id="minus"
+                data-action="set">
+
+                <ion-icon name="remove-circle-outline"></ion-icon>
+                <span class="sr-only">Less minus</span>
+            </button>
+
+            <button 
+                class="btn" 
+                id="music"
+                data-action="set">
+
+                <ion-icon name="musical-notes-outline"></ion-icon>
+                <span class="sr-only">Play Music</span>
+            </button>
+        </div>
+    </div>
+    
+        <div class="weather-wrapper">
+            <div id="nature">
+                <button id="nature" class="card">
+                    <ion-icon name="leaf-outline"></ion-icon>
+                </button>
+                <span class="sr-only">Active video nature</span>
+            </div>
+            <div id="rain">
+                <button id="rain " class="card">
+                    <ion-icon name="rainy-outline"></ion-icon>
+                </button>
+                <span class="sr-only">Active video rain</span>
+            </div>
+            <div id="coffee">
+                <button id="coffee" class="card">
+                    <ion-icon name="home-outline"></ion-icon>
+                </button></span>
+                <span class="sr-only">Active video Coffee Shop</span>
+            </div>
+            <div id="fire">
+                <button id="fire" class="card">
+                    <ion-icon name="flame-outline"></ion-icon>
+                </button></span>
+                <span class="sr-only">Active mode Fireplace</span>
+            </div>
+        </div>
+        <div></div>
+    </div> 
+
+
+
+
+
+
+    <script src="./src/js/main.js" defer type="module"></script>
+</body>
+</html>
