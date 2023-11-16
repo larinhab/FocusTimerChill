@@ -31,6 +31,7 @@ export function toggleMusic() {
             audio.defaultAudio.pause() 
             musicBtn.style.display = 'none'
             stopBtn.style.display = 'block'
+            console.log('parei')
         }else{
             audio.defaultAudio.play()
         }
@@ -40,13 +41,11 @@ export function toggleMusic() {
      stopBtn.addEventListener('click', (e) => {
         if(isPlaying){
             audio.defaultAudio.pause()
-            musicBtn.style.display = 'block'
-            stopBtn.style.display = 'none'
-
         }else{
             audio.defaultAudio.play()
-            musicBtn.style.display = 'none'
-            stopBtn.style.display = 'block'
+            console.log("click voltei")
+            musicBtn.style.display = 'block'
+            stopBtn.style.display = 'none'
         }
         isPlaying = !isPlaying
      })

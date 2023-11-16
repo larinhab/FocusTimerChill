@@ -12,6 +12,26 @@ Its a web aplication that help you to study, focus, relax, do timed activies<br/
 
 <video src="./src/assets/TimetoFocus.mp4" autoplay loop muted> </video>
 
+<p align="center">
+  <img alt="default screen" src="./src/assets/readme1.png" width="100%">
+</p>
+
+<p align="center">
+  <img alt="" src="./src/assets/readme2.png" width="100%">
+</p>
+
+<p align="center">
+  <img alt="" src="./src/assets/readme3.png" width="100%">
+</p>
+
+<p align="center">
+  <img alt="" src="./src/assets/readme4.png" width="100%">
+</p>
+
+<p align="center">
+  <img alt="" src="./src/assets//readme5.png" width="100%">
+</p>
+
 ## 🚀 Techs / Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
