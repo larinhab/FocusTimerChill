@@ -6,7 +6,7 @@
 }
 
 html, body, #page {
-    height: 100vh;
+    height: 100vh; 
     overflow: hidden;
 }
 
@@ -18,11 +18,13 @@ video {
     position: absolute;
     inset: 0;
     z-index: -1;
-    object-fit: cover;
+    overflow: hidden;
+    object-fit:contain;
+
+    
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-
+    background-size: cover; 
 }
 
 #page {
@@ -44,11 +46,15 @@ video {
   
     background-color: #ffffff;
     opacity: .8;
-    box-shadow: 10px 10px 51px 0px  rgba(255,255,255,0.75);
-    border-radius: 5px;
-    backdrop-filter: blur(40px);
+    background: linear-gradient( 135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     -webkit-box-shadow: 10px 10px 51px 0px;
     -moz-box-shadow: 10px 10px 51px 0px;
+
+    /*box-shadow: 10px 10px 51px 0px  rgba(255,255,255,0.75);
+        backdrop-filter: blur(40px);*/
+    border-radius: 5px;
 }
 
 .timer-wrapper {
@@ -105,12 +111,20 @@ video {
 
     cursor: pointer;
     color: #323238;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -webkit-box-shadow: 10px 10px 51px 0px;
+    -moz-box-shadow: 10px 10px 51px 0px;
+    border-radius: 30px;
 }
 
 .weather-wrapper button:hover {
     color: hsla(194, 97%, 31%, 1);
     transition: .8s;
-    background-color: #858585;
+    opacity: .8;
+    background-color: transparent;
+    border: 1px solid hsla(194, 97%, 31%, 1);
 }
 
 #stop {
@@ -138,10 +152,16 @@ video {
 .nature .timer-wrapper button:hover,
 .nature .controls-wrapper button:hover {
     color: #325c1f;
+
+    opacity: .8;
+    background-color: transparent;
+    border: none;
 }
 
 .nature .weather-wrapper button:hover {
     color: #325c1f;
+
+    border: #325c1f;
 }
 
 .rain {
@@ -158,10 +178,16 @@ video {
 .rain .timer-wrapper button:hover,
 .rain .controls-wrapper button:hover {
     color: #0f175c;
+
+    opacity: .8;
+    background-color: transparent;
+    border: none;
 }
 
 .rain .weather-wrapper button:hover {
     color:#0f175c;
+
+    border: #0f175c;
 }
 
 
@@ -179,10 +205,16 @@ video {
 .coffee .timer-wrapper button:hover,
 .coffee .controls-wrapper button:hover {
     color: #2b1c1c;
+
+    opacity: .8;
+    background-color: transparent;
+    border: none;
 }
 
 .coffee .weather-wrapper button:hover {
     color:#2b1c1c;
+
+    border: #2b1c1c;
 }
 
 .fire {
@@ -192,17 +224,23 @@ video {
 
 .fire .timer-wrapper,
 .fire .controls-wrapper button {
-    color: black;
+    color: rgb(255, 255, 255);
     
 }
 
 .fire .timer-wrapper button:hover,
 .fire .controls-wrapper button:hover {
     color: #410404;
+
+    opacity: .8;
+    background-color: transparent;
+    border: none;
 }
 
 .fire .weather-wrapper button:hover {
     color: #410404;
+
+    border: #410404;
 }
 
 .sr-only {

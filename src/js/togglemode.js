@@ -1,10 +1,6 @@
 import * as multimedia from "./FocusTimer/media.js"
 
 let defaultMode = true
-let natureMode = false
-let rainMode = false
-let coffeeMode = false
-let fireMode = false
 
 const natureToggle = document.getElementById('nature')
 const rainToggle = document.getElementById('rain')
